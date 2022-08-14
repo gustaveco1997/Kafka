@@ -1,0 +1,37 @@
+-> Microsserviço
+- - Comunica através de protocolo específico (Rest, Eventos)
+- - Desenvolvidos indivudualmente
+- - Baixo acoplamento
+
+
+Mensageria
+-> Message Broker (Servidor de mensagem) / (Barramento de mensagens)
+- - Enfileirada, armazenada, garantindo que ela fique alá até alguém consumir a mensagem
+- - Desacoplamento
+Desvantagem
+- - Inconsistência Eventual
+
+-- Chat é utilizado a base de eventos
+
+---Padrões
+ -> First in, First ou
+ -> Publish/Subscriber -> Envia a mensagem através de um tópico, com isso, os subscribers recebem a mensagem
+ - - Exemplo (Grupo de WhatsApp) Vários Subscribers (Usuários) tópico (grupo x)
+
+
+ Persistência e durabilidade
+ -> Política de durabilidade (varia)
+ - - Pode ser descartada depois de certo tempo
+
+
+ Streaming de Eventos
+  -> Fluxo de eventos: Captura de dados em tempo real
+  -> Durabilidade: armazena os fluxos de evento de forma duradoura, para recuperar depois
+  -> Tratamento: Manipular, processar os fluxos de eventos
+  -> Destinação: encaminhar os fluxos de eventos para diferentes tecnologias
+  -> Garantia: Garante um fluxo contínuo e interpretação dos dados para que a informação certa, esteja no lugar certo, na hora certa
+
+
+
+  Tipos
+  RabbitMQ (AMQP), Kafka, SQS

@@ -1,0 +1,9 @@
+Caso:
+ - Com Kafka
+Peguei várias mensagens.
+Estava lendo uma a uma.
+Houve um momento, que deu problema.
+Começou a rebalancear as partições, enquanto estava lendo.
+Ai o Kafka se perdeu, no que já foi commitado e qual mensagem é de onde.
+
+Por isso, o ideal é pegar cada mensagem, não um amontoado de mensagens
